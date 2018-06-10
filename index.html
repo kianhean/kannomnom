@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	    crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
 
 </head>
 
@@ -17,29 +17,25 @@
 
 	<div class="cover-container d-flex h-100 p-3 mx-auto flex-column" id="people">
 		<header>
-			<h1 class="text-center">KanNomNom</h1>
+			<h1 class="text-center title">KanNomNom</h1>
 			<h4 class="text-center">of course can!</h4>
 		</header>
 		<br/>
 
 		<div class="filter">
 			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" id="Tech" v-model="selectedCategory" value="Tech">
-				<label class="form-check-label" for="Tech">Tech</label>
+				<input class="form-check-input" type="radio" id="Pizza" v-model="selectedCategory" value="Pizza">
+				<label class="form-check-label" for="Pizza">Pizza</label>
 			</div>
 			<div class="form-check form-check-inline">
 				<input class="form-check-input" type="radio" id="Entertainment" v-model="selectedCategory" value="Entertainment">
 				<label class="form-check-label" for="Entertainment">Entertainment</label>
 			</div>
-			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" id="Fictional" v-model="selectedCategory" value="Fictional">
-				<label class="form-check-label" for="Fictional">Fictional</label>
-			</div>
 		</div>
 
 		<div class="card" v-for="person in filteredPeople">
 			<div class="card-body">
-				<h5 class="card-title">Rank: X {{ person.name }}</h5>
+				<h5 class="card-title">Rank: {{ person.rank }} {{ person.name }}</h5>
 				<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 				<a href="#" class="btn btn-primary btn-sm">Website</a> <a href="#" class="btn btn-info btn-sm">Location</a>
 			</div>

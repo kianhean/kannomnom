@@ -2,43 +2,32 @@ var vm = new Vue({
 	el: "#people",
 	data: {
 		people: [{
-				name: "Bill Gates",
-				category: "Tech"
+				name: "Amo",
+				category: "Pizza",
+				rank: 1
 			},
 			{
-				name: "Steve Jobs",
-				category: "Tech"
+				name: "Cicheti",
+				category: "Pizza",
+				rank: 2
 			},
 			{
-				name: "Jeff Bezos",
-				category: "Tech"
+				name: "Mozza",
+				category: "Pizza",
+				rank: 3
 			},
 			{
-				name: "George Clooney",
-				category: "Entertainment"
+				name: "Plank",
+				category: "Pizza",
+				rank: 4
 			},
 			{
-				name: "Meryl Streep",
-				category: "Entertainment"
-			},
-			{
-				name: "Amy Poehler",
-				category: "Entertainment"
-			},
-			{
-				name: "Lady of Lórien",
-				category: "Fictional"
-			},
-			{
-				name: "BB8",
-				category: "Fictional"
-			},
-			{
-				name: "Michael Scott",
-				category: "Fictional"
+				name: "Blue Label",
+				category: "Pizza",
+				rank: 5
 			}
 		],
-		selectedCategory: "Tech"
+		selectedCategory: "Pizza"
 	},
 	computed: {
 		filteredPeople: function () {
@@ -47,7 +36,7 @@ var vm = new Vue({
 			var filtered = vm.people.filter(function (person) {
 				return person.category === category;
 			})
-			return _.orderBy(filtered, ['name'], ['asc']);
+			return _.orderBy(filtered, ['rank'], ['asc']);
 		}
 	}
 });
