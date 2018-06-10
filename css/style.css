@@ -1,5 +1,20 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
 .cover-container {
 	max-width: 42em;
+	background: white;
+	font-weight: bolder
+}
+
+header {
+	padding-top: 40px;
+	padding-bottom: 10px;
+}
+
+.filter {
+	padding-bottom: 20px
 }
 
 .card {
@@ -8,12 +23,5 @@
 
 .bg-image {
 	/* https://source.unsplash.com/ */
-	background: url('https://source.unsplash.com/1cWZgnBhZRs/1600x900');
-	padding-top: 80px;
-	padding-bottom: 80px;
-	opacity: .4;
-}
-
-.bg-image h1, .bg-image h4{
-	opacity: 1;
+	/*background: url('https://source.unsplash.com/1cWZgnBhZRs/1600x900'); */
 }
