@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Simple list filter with Vue.js with Ordering</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+	<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+	<div class="container" id="people">
+		<div class="filter">
+			<label>
+				<input type="radio" v-model="selectedCategory" value="Tech" /> Tech</label>
+			<label>
+				<input type="radio" v-model="selectedCategory" value="Entertainment" /> Entertainment</label>
+			<label>
+				<input type="radio" v-model="selectedCategory" value="Fictional" /> Fictional</label>
+		</div>
+
+		<ul class="people-list">
+			<li v-for="person in filteredPeople">{{ person.name }}</li>
+		</ul>
+	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
+	<script src='https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js'></script>
+
+
+
+	<script src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
