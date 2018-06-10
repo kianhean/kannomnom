@@ -24,12 +24,18 @@
 		<br/>
 
 		<div class="filter">
-			<label>
-				<input type="radio" v-model="selectedCategory" value="Tech" /> Tech</label>
-			<label>
-				<input type="radio" v-model="selectedCategory" value="Entertainment" /> Entertainment</label>
-			<label>
-				<input type="radio" v-model="selectedCategory" value="Fictional" /> Fictional</label>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" id="Tech" v-model="selectedCategory" value="Tech">
+				<label class="form-check-label" for="Tech">Tech</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" id="Entertainment" v-model="selectedCategory" value="Entertainment">
+				<label class="form-check-label" for="Entertainment">Entertainment</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" id="Fictional" v-model="selectedCategory" value="Fictional">
+				<label class="form-check-label" for="Fictional">Fictional</label>
+			</div>
 		</div>
 
 		<ul class="people-list">
